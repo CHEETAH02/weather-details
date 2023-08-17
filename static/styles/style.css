@@ -1,0 +1,55 @@
+body {
+    background: fixed;
+    background-image: url('/static/images/bgweather.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.full {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.image {
+    width: 100px;
+    border: solid blue 4px;
+}
+
+.city {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(80, 80, 80)
+}
+
+.date {
+    font-size: 17px;
+    color: rgb(128, 128, 128)
+}
+
+.weather {
+    font-size: 35px;
+    font-weight: bolder;
+    padding-right: 10px;
+}
+
+.desc {
+    font-size: 20px;
+}
+
+.info {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.group-one {
+    line-height: 50px;
+    margin: 1rem;
+}
+
+.group-two {
+    line-height: 50px;
+    margin: 1rem;
+}
+
+.back {
+    text-decoration: none !important;
+    color: white !important;
+}

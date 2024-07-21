@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 
 app = Flask(__name__)
@@ -27,7 +27,7 @@ def home():
     data = {
         "city": response['name'],
         "country": response['sys']['country'],
-        "date": (datetime.fromtimestamp(response['dt'])).strftime('%d %B %Y, %I:%M:%S %p (%A)'),
+        "date": (datetime.fromtimestamp(response['dt']) + timedelta(seconds=response['timezone'])).strftime('%d %B %Y, %I:%M:%S %p (%A)'),
         "weather": response['weather'][0]['main'],
         "description": response['weather'][0]['description'],
         "temperature": f"{response['main']['temp'] - 273.15:.0f}°C",
